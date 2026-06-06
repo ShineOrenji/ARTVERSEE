@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title></title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ["Poppins", "system-ui", "sans-serif"],
+                    },
+                    animation: {
+                        scroll: "scroll 30s linear infinite",
+                        "scroll-reverse": "scroll-reverse 30s linear infinite",
+                    },
+                    keyframes: {
+                        scroll: {
+                            "0%": { transform: "translateX(0)" },
+                            "100%": { transform: "translateX(-50%)" },
+                        },
+                        "scroll-reverse": {
+                            "0%": { transform: "translateX(-50%)" },
+                            "100%": { transform: "translateX(0)" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-zinc-950 text-zinc-300 antialiased font-poppins overflow-x-hidden">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar absolute top-0 w-full z-50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="text-card text-2xl font-semibold tracking-tight text-white"><i class="fa-solid fa-paintbrush"></i>Artversee Portofolio
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#about" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="#skills" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-fire"></i> Skills</a>
+                <a href="#projects" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-briefcase"></i> Projects</a>
+                <a href="#gallery" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-images"></i>Gallery</a>
+                <a href="#contact" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-address-book"></i> Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contact" class="hidden md:inline-flex items-center px-5 py-2.5 text-white text-sm font-medium border rounded-full hover:bg-white hover:text-zinc-950 transition-colors"><i class="fa-solid fa-file"></i> Download CV
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden relative z-50 p-2 text-zinc-400 hover:text-white" aria-label="Toggle menu">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="#about" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="#skills" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-fire"></i> Skills</a>
+                <a href="#projects" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-briefcase"></i> Projects</a>
+                <a href="#gallery" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-images"></i> Gallery</a>
+                <a href="#contact" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <a href="#contact" class="mt-2 block text-center px-4 py-2.5 bg-white text-zinc-900 font-medium rounded-full"><i class="fa-solid fa-file"></i> Download CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="pt-20 overflow-x-hidden">
+
+        <!-- HERO SECTION -->
+
+        <section id="hero" class="main-page min-h-screen flex items-center px-6">
+            <div class="max-sm:mt-20 max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="max-sm:text-center text-4xl md:text-7xl font-bold text-white leading-tight">
+                        Designer &<br>Creative Developer
+                    </h1>
+                    <p class="max-sm:text-center text-lg text-zinc-400 max-w-lg">
+                        I craft clean digital experiences with a focus on simplicity and detail. Based in Purwakarta, working globally.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <a href="#projects" class="px-6 py-3 bg-white text-zinc-900 font-medium rounded-full hover:bg-zinc-200 transition-colors max-sm:text-sm">View Projects</a>
+                        <a href="#contact" class="px-6 py-3 border border-zinc-700 text-white font-medium rounded-full hover:border-zinc-500 transition-colors max-sm:text-sm">Contact Me</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <div class="project-card"><img src="img/Yoka CLOTH (Clay).png" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+
+        <section id="about" class="about-page py-24 px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">About</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all duration-300 hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Background</h3>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Self-taught developer with 5+ years of experience in web technologies and digital design. Passionate about creating seamless user experiences.
+                        </p>
+                    </div>
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all duration-300 hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Education</h3>
+                        <p class="text-zinc-400 leading-relaxed">
+                            B.Sc. in Computer Science. Continuous learner through online platforms, workshops, and real-world project implementations.
+                        </p>
+                    </div>
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all duration-300 hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Goals</h3>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Building innovative products at the intersection of design and technology. Aiming to lead creative engineering teams.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+
+        <section id="skills" class="border border-zinc-800 m-3 rounded-3xl py-24 px-6 bg-zinc-900/50">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Skills & Expertise</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
+                        <div class="text-4xl mb-5">[ ]</div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Programming</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                            Building robust applications with modern technologies and best practices.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">JavaScript</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">TypeScript</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">React</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
+                        <div class="text-4xl mb-5">3D</div>
+                        <h3 class="text-xl font-semibold text-white mb-3">3D Art & Animation</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                            Creating stunning 3D visuals and animations for web and media.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Blender</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Three.js</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">WebGL</span>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
+                        <div class="text-4xl mb-5">UI</div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Design Tools</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                            Designing intuitive interfaces and seamless user experiences.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Figma</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Adobe XD</span>
+                            <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+
+        <section id="projects" class="py-24 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Selected Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center text-zinc-600 text-2xl font-medium">
+                            Soon Aamiin
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold text-white">E-commerce Dashboard</h3>
+                            <p class="text-zinc-400 text-sm mt-2">Analytics platform with real-time data visualization.</p>
+                            <div class="flex gap-2 mt-4">
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">React</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">D3.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center text-zinc-600 text-2xl font-medium">
+                            Soon Aamiin
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold text-white">3D Portfolio Viewer</h3>
+                            <p class="text-zinc-400 text-sm mt-2">Interactive WebGL experience with custom shaders.</p>
+                            <div class="flex gap-2 mt-4">
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Three.js</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Blender</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center text-zinc-600 text-2xl font-medium">
+                            Soon Aamiin
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold text-white">Design System Kit</h3>
+                            <p class="text-zinc-400 text-sm mt-2">Reusable component library for rapid prototyping.</p>
+                            <div class="flex gap-2 mt-4">
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Figma</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Storybook</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+
+        <section id="gallery" class="m-3 gallery-page py-24 px-6 border rounded-3xl border-zinc-700 bg-zinc-900/50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">3D Gallery</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 hover:border-zinc-600 transition-colors cursor-pointer">
+                        <span class="text-sm font-medium">Soon Aamiin</span>
+                    </div>
+                    <div class="aspect-square rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 hover:border-zinc-600 transition-colors cursor-pointer">
+                        <span class="text-sm font-medium">Soon Aamiin</span>
+                    </div>
+                    <div class="aspect-square rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 hover:border-zinc-600 transition-colors cursor-pointer">
+                        <span class="text-sm font-medium">Soon Aamiin</span>
+                    </div>
+                    <div class="aspect-square rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 hover:border-zinc-600 transition-colors cursor-pointer">
+                        <span class="text-sm font-medium">Soon Aamiin</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGIES SECTION -->
+
+        <section class="py-20 border-t border-b border-zinc-800 bg-zinc-950">
+            <div class="max-w-5xl mx-auto px-6">
+
+                <!-- Heading -->
+                <p class="text-center text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-12">
+                    Technologies I work with
+                </p>
+
+                <!-- Tech Grid Table -->
+                <div class="bg-grid border border-zinc-800 rounded-2xl overflow-hidden">
+                    <div class="max-sm:grid-cols-1 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 text-center">
+
+                        <!-- Tailwind CSS -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Tailwind CSS</span>
+                        </div>
+
+                        <!-- React -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">React</span>
+                        </div>
+
+                        <!-- TypeScript -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">TypeScript</span>
+                        </div>
+
+                        <!-- Node.js -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Node.js</span>
+                        </div>
+
+                        <!-- Blender -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Blender</span>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Figma</span>
+                        </div>
+
+                        <!-- Next.js -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Next.js</span>
+                        </div>
+
+                        <!-- Adobe Suite -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">C++</span>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Python</span>
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Laravel</span>
+                        </div>
+
+                        <!-- Photoshop -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">Photoshop</span>
+                        </div>
+
+                        <!-- WebGL -->
+                        <div class="tech-grid-cell group">
+                            <span class="text-3xl font-semibold text-white">WebGL</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+
+        <section id="contact" class="py-24 px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4"><i class="fa-solid fa-paintbrush"></i>Artverse Portofolio</h2>
+                <p class="text-zinc-400 mb-10">I'm currently available for freelance work and interesting projects.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-artstation"></i> ArtStation</a>
+                    <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+                    <a href="mailto:hello@alexchen.dev" class="max-sm:text-sm px-6 py-3 bg-white text-zinc-900 font-medium rounded-full hover:bg-zinc-200 transition-colors"><i class="fa-solid fa-envelope"></i> fahmirhamadan5@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="py-8 text-center text-zinc-500 text-sm">
+            &copy; 2025 Artversee. All rights reserved.
+        </footer>
+
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

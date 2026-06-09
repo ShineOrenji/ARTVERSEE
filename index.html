@@ -11,7 +11,9 @@
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -24,6 +26,7 @@
                 extend: {
                     fontFamily: {
                         poppins: ["Poppins", "system-ui", "sans-serif"],
+                        archivo: ["Archivo Black", "system-ui", "sans-serif"],
                     },
                     animation: {
                         scroll: "scroll 30s linear infinite",
@@ -44,28 +47,28 @@
         };
     </script>
 </head>
-<body class="bg-zinc-950 text-zinc-300 antialiased font-poppins overflow-x-hidden">
+<body class="bg-zinc-950 text-zinc-300 antialiased font-archivo overflow-x-hidden">
 
     <!-- NAVBAR -->
 
-    <header class="navbar absolute top-0 w-full z-50 backdrop-blur-sm">
+    <header class="navbar absolute bg-zinc-950/40 top-0 w-full z-50 backdrop-blur-sm max-sm:fixed">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
             <!-- Logo -->
-            <a href="#" class="text-card text-2xl font-semibold tracking-tight text-white"><i class="fa-solid fa-paintbrush"></i>Artversee Portofolio
+            <a href="#" class="text-card text-2xl font-semibold tracking-tight text-white"><i class="fa-solid fa-paintbrush"></i>Artversee
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-8 text-sm">
-                <a href="#about" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-circle-info"></i> About</a>
-                <a href="#skills" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-fire"></i> Skills</a>
-                <a href="#projects" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-briefcase"></i> Projects</a>
-                <a href="#gallery" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-images"></i>Gallery</a>
-                <a href="#contact" class="text-white hover:text-white transition-colors"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <a href="#about" class="nav-link text-white hover:text-white transition-colors"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="#skills" class="nav-link text-white hover:text-white transition-colors"><i class="fa-solid fa-fire"></i> Skills</a>
+                <a href="#projects" class="nav-link text-white hover:text-white transition-colors"><i class="fa-solid fa-briefcase"></i> Projects</a>
+                <a href="#gallery" class="nav-link text-white hover:text-white transition-colors"><i class="fa-solid fa-images"></i> Gallery</a>
+                <a href="#contact" class="nav-link text-white hover:text-white transition-colors"><i class="fa-solid fa-address-book"></i> Contact</a>
             </nav>
 
             <!-- CTA Button -->
-            <a href="#contact" class="hidden md:inline-flex items-center px-5 py-2.5 text-white text-sm font-medium border rounded-full hover:bg-white hover:text-zinc-950 transition-colors"><i class="fa-solid fa-file"></i> Download CV
+            <a href="https://plus.unsplash.com/premium_photo-1664299631876-f143dc691c4d?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" target="_blank" class="hidden md:inline-flex items-center px-5 py-2.5 text-white text-sm font-medium border rounded-full hover:bg-white hover:text-zinc-950 transition-colors"><i class="fa-solid fa-file"></i> Download CV
             </a>
 
             <!-- Mobile Menu Button -->
@@ -101,12 +104,12 @@
                     <h1 class="max-sm:text-center text-4xl md:text-7xl font-bold text-white leading-tight">
                         Designer &<br>Creative Developer
                     </h1>
-                    <p class="max-sm:text-center text-lg text-zinc-400 max-w-lg">
+                    <p class="max-sm:text-center text-lg text-zinc-400 max-w-lg font-poppins">
                         I craft clean digital experiences with a focus on simplicity and detail. Based in Purwakarta, working globally.
                     </p>
                     <div class="flex gap-4 pt-4">
                         <a href="#projects" class="px-6 py-3 bg-white text-zinc-900 font-medium rounded-full hover:bg-zinc-200 transition-colors max-sm:text-sm">View Projects</a>
-                        <a href="#contact" class="px-6 py-3 border border-zinc-700 text-white font-medium rounded-full hover:border-zinc-500 transition-colors max-sm:text-sm">Contact Me</a>
+                        <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-full hover:border-white hover:bg-white hover:text-zinc-900 transition-colors max-sm:text-sm">Contact Me</a>
                     </div>
                 </div>
                 <div class="flex justify-center md:justify-end">
@@ -119,7 +122,8 @@
 
         <section id="about" class="about-page py-24 px-6">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">About</h2>
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white ">About</h2>
+                <div class="mx-auto w-28 h-[3px] bg-white mt-3 mb-16"></div>
                 <div class="grid md:grid-cols-3 gap-8">
 
                     <div class="group p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all duration-300 hover:shadow-xl">
@@ -129,7 +133,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Background</h3>
-                        <p class="text-zinc-400 leading-relaxed">
+                        <p class="text-zinc-400 leading-relaxed font-poppins">
                             Self-taught developer with 5+ years of experience in web technologies and digital design. Passionate about creating seamless user experiences.
                         </p>
                     </div>
@@ -142,7 +146,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Education</h3>
-                        <p class="text-zinc-400 leading-relaxed">
+                        <p class="text-zinc-400 leading-relaxed font-poppins">
                             B.Sc. in Computer Science. Continuous learner through online platforms, workshops, and real-world project implementations.
                         </p>
                     </div>
@@ -154,7 +158,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Goals</h3>
-                        <p class="text-zinc-400 leading-relaxed">
+                        <p class="text-zinc-400 leading-relaxed font-poppins">
                             Building innovative products at the intersection of design and technology. Aiming to lead creative engineering teams.
                         </p>
                     </div>
@@ -173,10 +177,10 @@
                     <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
                         <div class="text-4xl mb-5">[ ]</div>
                         <h3 class="text-xl font-semibold text-white mb-3">Programming</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 font-poppins">
                             Building robust applications with modern technologies and best practices.
                         </p>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 font-poppins">
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">JavaScript</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">TypeScript</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">React</span>
@@ -187,10 +191,10 @@
                     <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
                         <div class="text-4xl mb-5">3D</div>
                         <h3 class="text-xl font-semibold text-white mb-3">3D Art & Animation</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 font-poppins">
                             Creating stunning 3D visuals and animations for web and media.
                         </p>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 font-poppins">
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Blender</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Three.js</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">WebGL</span>
@@ -200,10 +204,10 @@
                     <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
                         <div class="text-4xl mb-5">UI</div>
                         <h3 class="text-xl font-semibold text-white mb-3">Design Tools</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 font-poppins">
                             Designing intuitive interfaces and seamless user experiences.
                         </p>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 font-poppins">
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Figma</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Adobe XD</span>
                             <span class="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Tailwind CSS</span>
@@ -227,10 +231,10 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-semibold text-white">E-commerce Dashboard</h3>
-                            <p class="text-zinc-400 text-sm mt-2">Analytics platform with real-time data visualization.</p>
+                            <p class="text-zinc-400 text-sm mt-2 font-poppins">Analytics platform with real-time data visualization.</p>
                             <div class="flex gap-2 mt-4">
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">React</span>
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">D3.js</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">React</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">D3.js</span>
                             </div>
                         </div>
                     </div>
@@ -241,10 +245,10 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-semibold text-white">3D Portfolio Viewer</h3>
-                            <p class="text-zinc-400 text-sm mt-2">Interactive WebGL experience with custom shaders.</p>
+                            <p class="text-zinc-400 text-sm mt-2 font-poppins">Interactive WebGL experience with custom shaders.</p>
                             <div class="flex gap-2 mt-4">
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Three.js</span>
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Blender</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">Three.js</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">Blender</span>
                             </div>
                         </div>
                     </div>
@@ -255,10 +259,10 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-semibold text-white">Design System Kit</h3>
-                            <p class="text-zinc-400 text-sm mt-2">Reusable component library for rapid prototyping.</p>
+                            <p class="text-zinc-400 text-sm mt-2 font-poppins">Reusable component library for rapid prototyping.</p>
                             <div class="flex gap-2 mt-4">
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Figma</span>
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full">Storybook</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">Figma</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">Storybook</span>
                             </div>
                         </div>
                     </div>
@@ -373,9 +377,9 @@
 
         <section id="contact" class="py-24 px-6">
             <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4"><i class="fa-solid fa-paintbrush"></i>Artverse Portofolio</h2>
-                <p class="text-zinc-400 mb-10">I'm currently available for freelance work and interesting projects.</p>
-                <div class="flex flex-wrap justify-center gap-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4"><i class="fa-solid fa-paintbrush"></i>Artverse</h2>
+                <p class="text-zinc-400 mb-10 font-poppins">I'm currently available for freelance work and interesting projects.</p>
+                <div class="flex flex-wrap justify-center gap-4 font-poppins">
                     <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-github"></i> GitHub</a>
                     <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-artstation"></i> ArtStation</a>
                     <a href="#" class="px-6 py-3 border border-zinc-700 rounded-full text-white hover:border-zinc-500 transition-colors"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
@@ -386,11 +390,18 @@
 
         <!-- FOOTER -->
 
-        <footer class="py-8 text-center text-zinc-500 text-sm">
+        <footer class="py-8 text-center text-zinc-500 text-sm font-poppins">
             &copy; 2025 Artversee. All rights reserved.
         </footer>
 
     </main>
+
+        <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+        </svg>
+    </button>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>

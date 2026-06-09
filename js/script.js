@@ -46,3 +46,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+ /* ============================================
+     BACK TO TOP BUTTON
+  ============================================ */
+  const backToTopBtn = document.getElementById('back-to-top');
+  const SCROLL_THRESHOLD = 300;
+
+  function handleScroll() {
+    if (window.scrollY > SCROLL_THRESHOLD) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Initial check
+  handleScroll();

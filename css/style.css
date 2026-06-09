@@ -50,6 +50,39 @@ html {
   visibility: visible;
 }
 
+/* ============================================
+   NAV LINK - CENTER EXPANDING UNDERLINE
+============================================ */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition:
+    left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
+[data-theme="light"] .nav-link::after {
+  background: #18181b;
+}
+
 /* Smooth transitions */
 a,
 button {
@@ -57,13 +90,13 @@ button {
 }
 
 .text-card {
-    transition:
+  transition:
     transform 0.3s ease,
     border-color 0.3s ease;
 }
 
 .text-card:hover {
-    transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 /* Project card hover */
@@ -75,8 +108,7 @@ button {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px);
 }
 
 /* Custom scrollbar */
@@ -172,20 +204,96 @@ button {
   );
 }
 
-.gallery-page {
-    background-image: url(../img/bg.JPG);
-    background-position: center;
-    background-size: cover;
-}
-
 .main-page {
-    background-image: url(../img/background.png);
-    background-position: center;
-    background-size: cover;
+  background-image: url(../img/.png);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .about-page {
-    background-image: url(../img/background2.png);
-    background-position: center;
-    background-size: cover;
+  background-image: url(../img/background.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.gallery-page {
+  background-image: url(../img/bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+============================================ */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: white;
+  color: #09090b;
+  border: none;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  pointer-events: none;
+  transition:
+    opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.back-to-top-btn:hover {
+  background: #e4e4e7;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+[data-theme="light"] .back-to-top-btn {
+  background: #18181b;
+  color: white;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .back-to-top-btn:hover {
+  background: #27272a;
+}
+
+/* ==================== SCROLL REVEAL ==================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== SECTION BG ALTERNATING ==================== */
+
+section {
+  transition: background-color 0.4s ease;
 }

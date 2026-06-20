@@ -51,7 +51,7 @@
 
     <!-- NAVBAR -->
 
-    <header class="navbar absolute bg-zinc-950/40 top-0 w-full z-50 backdrop-blur-sm max-sm:fixed">
+    <header class="navbar absolute bg-zinc-950/40 top-0 w-full z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
             <!-- Logo -->
@@ -87,7 +87,7 @@
                 <a href="#projects" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-briefcase"></i> Projects</a>
                 <a href="#gallery" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-images"></i> Gallery</a>
                 <a href="#contact" class="block px-4 py-2.5 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"><i class="fa-solid fa-address-book"></i> Contact</a>
-                <a href="#contact" class="mt-2 block text-center px-4 py-2.5 bg-white text-zinc-900 font-medium rounded-full"><i class="fa-solid fa-file"></i> Download CV</a>
+                <a href="https://plus.unsplash.com/premium_photo-1664299631876-f143dc691c4d?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" target="_blank" class="mt-2 block text-center px-4 py-2.5 bg-white text-zinc-900 font-medium rounded-full"><i class="fa-solid fa-file"></i> Download CV</a>
             </nav>
         </div>
     </header>
@@ -101,15 +101,15 @@
         <section id="hero" class="main-page min-h-screen flex items-center px-6">
             <div class="max-sm:mt-20 max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <h1 class="max-sm:text-center text-4xl md:text-7xl font-bold text-white leading-tight">
-                        Designer &<br>Creative Developer
+                    <h1 class="max-sm:text-center max-sm:text-5xl text-4xl md:text-7xl font-bold text-white leading-tight">
+                        Designer<br><span class="hero-title-outline">& Creative</span> Developer
                     </h1>
                     <p class="max-sm:text-center text-lg text-zinc-400 max-w-lg font-poppins">
-                        I craft clean digital experiences with a focus on simplicity and detail. Based in Purwakarta, working globally.
+                        A creative learner passionate about art, design, and technology. Constantly exploring new ideas and developing skills through creative projects and digital experiences.
                     </p>
                     <div class="flex gap-4 pt-4">
-                        <a href="#projects" class="px-6 py-3 bg-white text-zinc-900 font-medium rounded-full hover:bg-zinc-200 transition-colors max-sm:text-sm">View Projects</a>
-                        <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-full hover:border-white hover:bg-white hover:text-zinc-900 transition-colors max-sm:text-sm">Contact Me</a>
+                        <a href="#projects" class="px-6 py-3 bg-white text-zinc-900 font-medium rounded-full hover:bg-zinc-200 transition-colors max-sm:text-sm font-poppins">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-full hover:border-white hover:bg-white hover:text-zinc-900 transition-colors max-sm:text-sm font-poppins">Contact Me</a>
                     </div>
                 </div>
                 <div class="flex justify-center md:justify-end">
@@ -171,7 +171,7 @@
 
         <section id="skills" class="border border-zinc-800 m-3 rounded-3xl py-24 px-6 bg-zinc-900/50">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Skills & Expertise</h2>
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Skills & <span class="hero-title-outline">Expertise</span></h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <div class="group p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5">
@@ -222,19 +222,19 @@
 
         <section id="projects" class="py-24 px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Selected Projects</h2>
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-white mb-16">Selected <span class="hero-title-outline">Projects</span></h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <div class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center text-zinc-600 text-2xl font-medium">
-                            Soon Aamiin
+                    <div onclick="window.open('https://mojang-laundry.vercel.app/', '_blank')" class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
+                        <div class="mojang h-48 flex items-center justify-center text-zinc-600 text-2xl font-medium">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-semibold text-white">E-commerce Dashboard</h3>
                             <p class="text-zinc-400 text-sm mt-2 font-poppins">Analytics platform with real-time data visualization.</p>
                             <div class="flex gap-2 mt-4">
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">React</span>
-                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">D3.js</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">HTML</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">CSS</span>
+                                <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full font-poppins">Javascript</span>
                             </div>
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
+                    <div onclick="window.open('https://mojang-laundry.vercel.app/admin/index.html', '_blank')" class="project-card group rounded-3xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-zinc-700 transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center text-zinc-600 text-2xl font-medium">
                             Soon Aamiin
                         </div>
